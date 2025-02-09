@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+
+  <script>
+    // Incorrectly using innerHTML to remove an element
+    document.getElementById("myDiv").innerHTML = "";
+    //The above code will remove the div element completely.
+    //Correct approach: use removeChild()
+    
+    //Correct implementation
+    const divToRemove = document.getElementById("myDiv");
+    divToRemove.parentNode.removeChild(divToRemove);
+  </script>
+</body>
+</html>
