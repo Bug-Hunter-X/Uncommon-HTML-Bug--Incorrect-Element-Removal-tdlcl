@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+
+  <script>
+    // Correctly using removeChild() to remove an element
+    const divToRemove = document.getElementById("myDiv");
+    divToRemove.parentNode.removeChild(divToRemove);
+  </script>
+</body>
+</html>
